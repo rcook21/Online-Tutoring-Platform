@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoring Website Login</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("{% static 'myApp/img.jpeg' %}");
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Make the body full height */
+        }
+
+        .container {
+            max-width: 400px;
+            width: 100%; /* Ensure it takes full width on smaller screens */
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd; /* Add a border around the box */
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-container {
+            margin-top: 20px;
+        }
+
+        .form {
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .link-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+
+        .link-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chef Pham Tutoring</h1>
+
+        <!-- Login link -->
+        <a href="/login/" class="link-button">Login</a>
+        
+        <!-- Register link -->
+        <a href="/register/" class="link-button">Register</a>
+
+        <p>Don't have an account? <a href="/register/">Register here</a></p>
+    </div>
+</body>
+</html>
+
