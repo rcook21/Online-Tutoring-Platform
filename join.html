@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Course</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Create Course form -->
+        <form class="col-6 mx-auto card p-3 shadow-lg" method="post" action="{% url 'join' %}" enctype="multipart/form-data">
+            <h1 style="text-align: center;"><span style="color: green;">Create Course</span></h1>
+
+            {% csrf_token %}  <!-- CSRF token for security -->
+
+            <!-- Form heading -->
+            <h3>Create New Course</h3>
+            <hr>
+
+            <!-- Display error/success messages -->
+            {% if messages %}
+            <div class="alert alert-primary" role="alert">
+                {% for message in messages %}
+                {{ message }}
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <!-- Course Name input field -->
+            <div class="form-group">
+                <label for="courseName">Course Name</label>
+                <input type="text" class="form-control" name="name" id="courseName" placeholder="Enter course name" required>
+            </div>
+
+            <!-- Start Date input field -->
+            <div class="form-group">
+                <label for="startDate">Start Date</label>
+                <input type="date" class="form-control" name="start_date" id="startDate" required>
+            </div>
+
+            <!-- End Date input field -->
+            <div class="form-group">
+                <label for="endDate">End Date</label>
+                <input type="date" class="form-control" name="end_date" id="endDate" required>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary">Create Course</button>
+        </form>
+    </div>
+</body>
+</html>
+

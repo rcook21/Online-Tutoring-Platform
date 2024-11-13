@@ -1,9 +1,11 @@
+
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    background-image: url(71926550231__88FBF30D-F432-4EA1-A210-32EBC3A445CF.jpeg);
-    background-size: cover;
-    background-position: center;
+        font-family: Arial, sans-serif;
+        background-image: url("{% static 'myApp/img.jpeg' %}");
+        background-size: cover;
+        background-position: center;
+    
     margin: 0;
     padding: 20px;
     display: flex;
