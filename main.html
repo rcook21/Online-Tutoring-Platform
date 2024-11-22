@@ -221,6 +221,21 @@
         <a href="join/" class="cta-button">Find One with Your Subject</a>
     </section>
 
+    <script>
+        // JavaScript to handle like/dislike interactions
+        document.querySelectorAll('.like-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                alert('You liked this!');
+            });
+        });
+
+        document.querySelectorAll('.dislike-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                alert('You disliked this.');
+            });
+        });
+    </script>
+    
     <footer>
         <div class="footer-links">
             <a href="#privacy">Privacy Policy</a>
